@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Login from '../../../pages/login';
+import MuiDrawer from '../../drawer';
 
 const pages = [{ title: 'Candidates', href: '/candidates' }];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -125,7 +125,7 @@ const Header = () => {
               </Button>
             ))}
           </Box>
-          <Login />
+          <MuiDrawer />
         </Toolbar>
       </Container>
     </AppBar>
