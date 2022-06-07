@@ -2,7 +2,7 @@ import axios, { AxiosResponse, Method } from 'axios';
 
 const CToken = axios.CancelToken;
 const previousRequests: any = {};
-const baseURL = 'http://localhost:8080/' || '';
+const baseURL = 'https://herocunest.herokuapp.com/' || 'http://localhost:8080/';
 const headers = {
   'Content-Type': 'application/json',
   Authorization: `Bearer ${localStorage.getItem('access_token') ? localStorage.getItem('access_token') : ''

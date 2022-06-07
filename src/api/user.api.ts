@@ -3,8 +3,8 @@ import WrapperRequest from './wrapper.api';
 export type FederatedType = { provider: string; accessToken: string };
 
 class UserApi extends WrapperRequest {
-  loginUser = (data: { email: string; password: string }) => {
-    return this.post('auth/signin', {
+  loginUser = (data: { username: string; password: string }) => {
+    return this.post('auth/login', {
       data,
     });
   };

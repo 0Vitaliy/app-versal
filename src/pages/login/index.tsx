@@ -1,13 +1,13 @@
-import * as React from 'react';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { Stack, Typography } from '@mui/material';
+import { useContext, useState, Fragment } from 'react';
+import { observer } from 'mobx-react-lite';
+import { Drawer, Button, TextField, Stack, Typography } from '@mui/material';
+import { AuthCTX } from '../../components/auth_store/store';
 
 type Anchor = 'Login' | 'left' | 'bottom' | 'right' | 'top';
 
-const Login = () => {
-  const [state, setState] = React.useState({
+const Login = observer(() => {
+  const { loginAction } = useContext(AuthCTX)
+  const [state, setState] = useState({
     top: false,
     left: false,
     bottom: false,
@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div>
       {['Login'].map((anchor) => (
-        <React.Fragment key={anchor}>
+        <Fragment key={anchor}>
           <Button onClick={toggleDrawer('right', true)}>{anchor}</Button>
           <Drawer
             anchor={'right'}
@@ -43,14 +43,14 @@ const Login = () => {
               <TextField id="outlined-basic" label="Email" variant="outlined" />
               <TextField id="outlined-basic" label="Password" variant="outlined" />
 
-              <Button variant="contained">Login</Button>
+              <Button variant="contained" onClick={() => loginAction({ username: 'string', password: 'string' })}>Login</Button>
             </Stack>
           </Drawer>
-        </React.Fragment>
+        </Fragment>
       ))}
     </div>
   );
-}
+})
 
 export default Login
 
