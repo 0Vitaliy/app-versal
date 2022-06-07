@@ -43,7 +43,7 @@ const Login = observer(() => {
               <TextField id="outlined-basic" label="Email" variant="outlined" />
               <TextField id="outlined-basic" label="Password" variant="outlined" />
 
-              <Button variant="contained" onClick={() => loginAction({ username: 'string', password: 'string' })}>Login</Button>
+              <Button variant="contained" onClick={() => loginAction({ username: 'Name10', password: 'password' })}>Login</Button>
             </Stack>
           </Drawer>
         </Fragment>
