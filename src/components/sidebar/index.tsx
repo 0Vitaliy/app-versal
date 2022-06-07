@@ -15,7 +15,7 @@ const Sidebar = observer(() => {
     setTimeout(() => {
       clearLocalStorage()
       setLoader(false)
-    }, 5000)
+    }, 2000)
   }
 
   return <Paper sx={{ width: 320, maxWidth: '100%' }}>

@@ -1,2 +1,2 @@
-export const REGISTRATION = '/registration';
+export const REGISTRATION = '/sign-up';
 

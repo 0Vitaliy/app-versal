@@ -10,7 +10,7 @@ class UserApi extends WrapperRequest {
   };
 
   signUpUser = (data: { email: string; password: string; name: string }) => {
-    return this.post('auth/signup/send_code', data);
+    return this.post('auth/sign-up', data);
   };
 }
 
