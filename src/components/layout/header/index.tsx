@@ -24,7 +24,11 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{
+      position: 'sticky',
+      top: 0,
+      zIndex: 34324
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -117,7 +121,7 @@ const Header = () => {
           <MuiDrawer />
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   );
 };
 export default Header;
