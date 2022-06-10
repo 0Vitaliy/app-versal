@@ -6,12 +6,13 @@ import { SnackbarInstance } from '../snackbar/store';
 
 class Auth {
 
-  loginAction = async (data: any) => {
+  loginAction = async (data: any, onSuccess: () => void) => {
     LoaderInstance.setLoader(true)
     try {
       const res = await UserApiProvider.loginUser(data);
       localStorage.setItem('access_token', res.access_token)
       SnackbarInstance.setOpenSnackbar(true)
+      onSuccess();
     } catch (e) {
 
     } finally {

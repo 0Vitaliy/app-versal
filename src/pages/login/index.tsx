@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { Button, TextField, Stack, Typography, Box } from '@mui/material';
 import { AuthCTX } from '../../components/auth_store/store';
-import { REGISTRATION } from '../../constants/routes';
+import { REGISTRATION, MY_RESUMES } from '../../constants/routes';
 
-const Login = observer(() => {
+const Login = observer(({ onClose }: any) => {
   const { loginAction } = useContext(AuthCTX)
   const navigate = useNavigate()
 
@@ -16,7 +16,7 @@ const Login = observer(() => {
       password: ''
     },
     onSubmit: values => {
-      loginAction({ username: 'Name10', password: 'password' })
+      loginAction({ username: 'Name10', password: 'password' }, () => { onClose(); navigate(MY_RESUMES); })
     },
   });
 
