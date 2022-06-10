@@ -27,7 +27,7 @@ const Header = () => {
     <AppBar position="static" sx={{
       position: 'sticky',
       top: 0,
-      zIndex: 34324
+      zIndex: 1111
     }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>

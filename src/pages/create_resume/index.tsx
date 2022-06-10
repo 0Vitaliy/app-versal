@@ -10,7 +10,7 @@ const CreateResume = () => {
           <Stack spacing={3} sx={{ width: 400 }}>
             <TextField label="FirstName" variant="outlined" />
             <TextField label="LastName" variant="outlined" />
-            <TextField label="Sex" variant="outlined" />
+
 
             <Button variant="contained">Save</Button>
           </Stack>
