@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { observer } from 'mobx-react-lite';
 import { Drawer, Button } from '@mui/material';
-import Login from '../../pages/login';
+import Login from 'pages/login';
 import Sidebar from '../sidebar';
 import { DrawerCTX } from './store';
 

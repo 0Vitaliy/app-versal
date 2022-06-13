@@ -1,11 +1,9 @@
-import { Paper, MenuList, MenuItem, ListItemText, ListItemIcon, Divider } from '@mui/material';
-import ContentCut from '@mui/icons-material/ContentCut';
-import ContentPaste from '@mui/icons-material/ContentPaste';
-import Cloud from '@mui/icons-material/Cloud';
-import { clearLocalStorage } from '../../services/storage.service';
 import { useContext } from 'react';
-import { LoaderCTX } from '../loader/store';
 import { observer } from 'mobx-react-lite';
+import { Paper, MenuList, MenuItem, ListItemText, ListItemIcon, Divider } from '@mui/material';
+import { ContentCut, ContentPaste, Cloud } from '@mui/icons-material';
+import { clearLocalStorage } from 'services/storage.service';
+import { LoaderCTX } from '../loader/store';
 
 const Sidebar = observer(() => {
   const { setLoader } = useContext(LoaderCTX)

@@ -1,7 +1,7 @@
+import { useContext } from 'react';
 import { Button, TextField, Stack, Typography, Box } from '@mui/material';
 import { useFormik } from 'formik';
-import { useContext } from 'react';
-import { AuthCTX } from '../../components/auth_store/store';
+import { AuthCTX } from 'components/auth_store/store';
 
 const Registration = () => {
   const { signUpAction } = useContext(AuthCTX)

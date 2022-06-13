@@ -7,8 +7,8 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
-import MuiDrawer from '../../drawer';
-import { MY_RESUMES, CANDIDATES } from '../../../constants/routes';
+import MuiDrawer from 'components/drawer';
+import { MY_RESUMES, CANDIDATES } from 'constants/routes';
 
 const pages = [{ title: 'Candidates', href: CANDIDATES }, { title: 'My resume', href: MY_RESUMES }];
 

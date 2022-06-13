@@ -1,4 +1,4 @@
-import ResumeCard from "../../components/card"
+import ResumeCard from "components/card"
 import Stack from '@mui/material/Stack';
 
 const Candidates = () => {
